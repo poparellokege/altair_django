@@ -1,0 +1,32 @@
+{% load static %}
+
+<section class="projects-section padding">
+    <div class="container">
+    <div class="row d-flex align-items-center">
+    <div class="col-lg-8 col-md-6">
+    <div class="section-heading mb-40">
+    <span>Проекты</span>
+    <h2>Посмотрите уже готовые проекты <br>наших клиентов</h2>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6 text-right">
+    <a href="{% url 'all-projects' %}" class="default-btn">Посмотреть все проекты</a>
+    </div>
+    </div>
+    <div id="projects-carousel" class="projects-carousel box-shadow owl-carousel">
+
+    {% for p in home_project_data %}
+    <div class="project-item">
+    <img src="{{p.image.url }}" alt="projects">
+    <div class="overlay"></div>
+    <a href="{{p.image.url}}" class="view-icon img-popup" data-gall="project"> <i class="fas fa-expand"></i></a>
+    <div class="projects-content">
+    <a href="#" class="category">{{p.category}}</a>
+    <h3><a href="{% url 'single-project' id=p.id %}" class="tittle">{{p.title}}</a></h3>
+    </div>
+    </div>
+    {% endfor %}
+
+    </div>
+    </div>
+    </section>

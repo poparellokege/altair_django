@@ -1,0 +1,48 @@
+
+{% include 'header.html' %}
+
+<section class="page-header padding">
+<div class="container">
+<div class="page-content text-center">
+<h2>Project single</h2>
+<p>Indico Constuction</p>
+</div>
+</div>
+</section>
+<section class="project-single-section padding">
+<div class="container">
+<div class="row project-single-wrap align-items-center">
+<div class="col-md-6 sm-padding">
+<div id="project-single-carousel" class="project-single-carousel box-shadow owl-carousel">
+<div class="single-carousel">
+<img src="{{single_pro.imageurl}}" alt="img">
+</div>
+<div class="single-carousel">
+<img src="{{single_pro.imageurl}}" alt="img">
+</div>
+<div class="single-carousel">
+<img src="{{single_pro.imageurl}}" alt="img">
+</div>
+</div>
+</div>
+<div class="col-md-6 sm-padding">
+<div class="project-single-content">
+<h2>{{single_pro.title}}</h2>
+<p>{{single_pro.details}}.</p>
+<ul class="project-details">
+<li><span>Architects</span>: {{single_pro.architects}}</li>
+<li><span>Location</span>: {{single_pro.location}}</li>
+<li><span>Category</span>: {{single_pro.category}}</li>
+<li><span>Area</span>: {{single_pro.area}}</li>
+<li><span>Project Year</span>: {{single_pro.created_at}}</li>
+<li><span>Manufactures</span>: {{single_pro.manufactures}}</li>
+</ul>
+</div>
+</div>
+</div>
+ </div>
+</section>
+
+{% include 'home-sponsor.html' %}
+{% include 'footer.html' %}
+

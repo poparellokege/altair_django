@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+<section class="page-header padding">
+<div class="container">
+<div class="page-content text-center">
+<h2>Готовые проекты</h2>
+</div>
+</div>
+</section>
+<section class="projects-section padding">
+<div class="container">
+<div class="row">
+
+{% for p in project_data %}
+<div class="col-lg-4 col-sm-6 padding-15">
+<div class="project-item">
+<img src="{{p.image.url}}" alt="projects">
+<div class="overlay"></div>
+<a href="#" class="view-icon ajax-popup-link"> <i class="fas fa-expand"></i></a>
+<div class="projects-content">
+<a href="#" class="category">{{p.category}}</a>
+<h3><a href="{% url 'single-project' id=p.id %}"  class="tittle">{{p.title}}</a></h3>
+</div>
+</div>
+</div>
+{% endfor %}
+
+
+
+</div>
+</div>
+</section>
+
+
+{% include 'home-sponsor.html' %}
+
+{% include 'footer.html' %}

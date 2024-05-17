@@ -1,0 +1,43 @@
+{% include 'header.html' %}
+
+
+<section class="page-header padding">
+<div class="container">
+<div class="page-content text-center">
+<h2>Наши услуги</h2>
+</div>
+</div>
+</section>
+<section class="service-section bg-grey padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div id="service-carousel" class="service-carousel box-shadow owl-carousel">
+{% for p in service_data %}
+<div class="service-item">
+<div class="service-icon">
+<i class="{{p.icon}}"></i>
+</div>
+<h3>{{p.title}}</h3>
+<p>{{p.details}}</p>
+
+<div class="overlay-icon">
+<i class="{{p.icon}}"></i>
+</div>
+</div>
+{% endfor %}
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% include 'home-test.html' %}
+
+{% include 'home-sponsor.html' %}
+
+{% include 'footer.html' %}
+

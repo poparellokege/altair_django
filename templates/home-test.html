@@ -1,0 +1,32 @@
+{% load static %}
+
+<section class="testimonial-section bg-grey padding">
+    <div class="dots"></div>
+    <div class="container">
+    <div class="section-heading text-center mb-40 wow fadeInUp" data-wow-delay="100ms">
+    <span>Отзывы</span>
+    <h2>Что о нас говорят</h2>
+    </div>
+    <div id="testimonial-carousel" class="testimonial-carousel box-shadow owl-carousel">
+        {% for test in testmonial_data %}
+    <div class="testi-item d-flex align-items-center">
+    <img src="{{test.image.url}}" alt="img">
+    <div class="testi-content">
+    <p>"{{test.short_description}}!"</p>
+    <h3>{{test.client_name}}</h3>
+    <ul class="rattings">
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    </ul>
+    <span>{{test.designation}}</span>
+    </div>
+    <i class="fa fa-quote-right"></i>
+    </div>
+    {% endfor %}
+
+    </div>
+    </div>
+    </section>

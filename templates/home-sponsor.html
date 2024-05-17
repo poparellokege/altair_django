@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="sponsor-section bg-grey">
+    <div class="dots"></div>
+    <div class="container">
+    <div id="sponsor-carousel" class="sponsor-carousel owl-carousel">
+    {% for s in sponsor_data %}
+    <div class="sponsor-item">
+    <img src="{{s.image.url}}" alt="sponsor">
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
